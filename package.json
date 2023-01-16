@@ -1,0 +1,15 @@
+{
+  "name": "cypress-template",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "cypress": "cypress open"
+  },
+  "author": "Jordan Wills",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "12.3.0"
+  }
+}
+
+
