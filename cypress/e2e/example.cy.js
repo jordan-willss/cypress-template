@@ -5,12 +5,14 @@ import { inputMap } from '../pages/inputsPage';
 
 import fixtures from '../fixtures/example.json';
 
-describe('template spec', () => {
-  it('passes', () => {
+describe('example spec', () => {
+  it('Input test', () => {
     // We can use a '/' to navigate to the homepage as the baseUrl is set in
     // cypress.config.js as "https://the-internet.herokuapp.com/"
     cy.visit('/');
+    
     findListEntry('Inputs').click();
+
     inputMap.header()
       .should('have.text', fixtures.input.header);
     inputMap.input()
