@@ -5,9 +5,9 @@ export default defineConfig({
     baseUrl: "https://the-internet.herokuapp.com/",
     reporter: "cypress-testrail-reporter",
     reporterOptions: {
-      host: "https://testtestrail23123.testrail.io",
-      username: "jordanewills@gmail.com",
-      password: "a5RwjApZV0/Bjz8gxZqD-VQ/twICzgDC.sq5z/LgV",
+      host: "https://{domain}.testrail.io",
+      username: "TestRail email address",
+      password: "TestRail API key",
       projectId: 1,
       suiteId: 1
     }
