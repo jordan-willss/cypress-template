@@ -2,6 +2,6 @@
 // imagine a new input element was added to the page,
 // would the cy.get below be broken?
 export const inputMap = {
-    header: () => cy.get('h3'),
-    input: () => cy.get('input')
-}
+  header: () => cy.get('h3'),
+  input: () => cy.get('input'),
+};

@@ -14,18 +14,30 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-const app = window.top;
 
-if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
-  const style = app.document.createElement('style');
-  style.innerHTML =
-    '.command-name-request:has(> .command-state-failed) { display: none }';
-  style.setAttribute('data-hide-command-log-request', '');
+/**
+ * !!!!!!!!!!!!!!!  IMPORTANT  !!!!!!!!!!!!!!!
+ * Enable/Disable this to hide/show XHR requests.
+ * This was added to hide all XHR requests for
+ * training purposes.
+ */
+const hideXHR = () => {
+  const app = window.top;
 
-  app.document.head.appendChild(style);
-}
+  if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
+    const style = app.document.createElement('style');
+    style.innerHTML =
+      '.command-name-request:has(> .command-state-failed) { display: none }';
+    style.setAttribute('data-hide-command-log-request', '');
+  
+    app.document.head.appendChild(style);
+  }
+};
+
+// hideXHR();
+
